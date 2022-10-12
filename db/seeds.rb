@@ -39,11 +39,15 @@ puts 'Finished!'
 
 puts 'Creating 100 fake articles'
 
-4.times do
-  Supplier.create!(
+100.times do
+  Article.create!(
   name: Faker::Company.name,
-  address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
-  email: Faker::Internet.email,
+  designation: "#{Faker::Address.street_address}, #{Faker::Address.city}",
+  colour: Faker::Internet.email,
+  phone: Faker::PhoneNumber.phone_number,
+  purchase_price: Faker::Company.name,
+  sale_price: "#{Faker::Address.street_address}, #{Faker::Address.city}",
+  co: Faker::Internet.email,
   phone: Faker::PhoneNumber.phone_number,
   compagny_id: "#{(Supplier.all).to_a.sample.id}"
 
