@@ -5,3 +5,47 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+require 'faker'
+
+Supplier.destroy_all
+Article.destroy_all
+Compagny.destroy_all
+puts 'No Compagnies Existing!'
+puts 'No Suppliers Existing !'
+puts 'No Articles Existing!'
+
+puts 'creating Compagies'
+dentidis = Compagny.create!(
+  name: 'Dentidis',
+  address: '8 chemin des tards venus, 69530 BRIGNAIS',
+  phone: '0472399040'
+)
+puts 'Creating 4 fake suppliers...'
+
+4.times do
+  Supplier.create!(
+  name: Faker::Company.name,
+  address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
+  email: Faker::Internet.email,
+  phone: Faker::PhoneNumber.phone_number,
+  compagny_id: "#{dentidis.id}"
+
+)
+end
+
+
+puts 'Finished!'
+
+puts 'Creating 100 fake articles'
+
+4.times do
+  Supplier.create!(
+  name: Faker::Company.name,
+  address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
+  email: Faker::Internet.email,
+  phone: Faker::PhoneNumber.phone_number,
+  compagny_id: "#{(Supplier.all).to_a.sample.id}"
+
+)
+end

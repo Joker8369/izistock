@@ -3,7 +3,7 @@ class CreateCompagnies < ActiveRecord::Migration[7.0]
     create_table :compagnies do |t|
       t.string :name
       t.string :address
-      t.integer :phone
+      t.string :phone
 
       t.timestamps
     end

@@ -3,7 +3,7 @@ class CreateSuppliers < ActiveRecord::Migration[7.0]
     create_table :suppliers do |t|
       t.string :name
       t.string :address
-      t.integer :phone
+      t.string :phone
       t.string :email
 
       t.timestamps
