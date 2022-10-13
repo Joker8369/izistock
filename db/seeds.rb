@@ -52,6 +52,7 @@ puts 'Creating 100 fake articles ...'
   sale_price: Faker::Number.number(digits: 3),
   code: Faker::Number.number(digits: 8) ,
   quantity: Faker::Number.number(digits: 1) ,
+  supplier_id: "#{Supplier.all.to_a.sample.id}",
 )
 end
 
