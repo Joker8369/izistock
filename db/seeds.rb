@@ -8,8 +8,8 @@
 
 require 'faker'
 
-Supplier.destroy_all
 Article.destroy_all
+Supplier.destroy_all
 Compagny.destroy_all
 Category.destroy_all
 ArticleCategory.destroy_all

@@ -9,4 +9,13 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/footer";
+@import "components/navbar";
 @import "pages/index";
+@import "components/body";
+@import "components/banner";
+@import "components/home";
+
+html {
+  height: 100%;
+}
