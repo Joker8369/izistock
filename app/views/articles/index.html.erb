@@ -1,28 +1,28 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
-
-
-
- <table>
-  <tr>
-    <th>Nom</th>
-    <th>Couleur</th>
-    <th>Fournisseur</th>
-    <th>Prix d'achat</th>
-    <th>Prix de vente</th>
-    <th>Code</th>
-    <th>Quantité</th>
-  </tr>
-    <% @articles.each do |article| %>
-  <tr>
-      <td><%= article.name %></td>
-      <td><%= article.colour %></td>
-      <td><%= Supplier.find_by(id: article.supplier_id).name %></td>
-      <td><%= article.purchase_price %></td>
-      <td><%= article.sale_price %></td>
-      <td><%= article.code %></td>
-      <td><%= article.quantity %></td>
-  </tr>
-    <% end %>
-
-</table>
+<div class="articles">
+<h1>Search bar</h1>
+    <div class="tbody">
+  <table>
+    <tr>
+      <th>Nom</th>
+      <th>Couleur</th>
+      <th>Fournisseur</th>
+      <th>Prix d'achat</th>
+      <th>Prix de vente</th>
+      <th>Code</th>
+      <th>Quantité</th>
+    </tr>
+    </div>
+      <% @articles.each do |article| %>
+    <tr>
+        <td><%= article.name %></td>
+        <td><%= article.colour %></td>
+        <td><%= Supplier.find_by(id: article.supplier_id).name %></td>
+        <td><%= article.purchase_price %></td>
+        <td><%= article.sale_price %></td>
+        <td><%= article.code %></td>
+        <td><%= article.quantity %></td>
+    </tr>
+      <% end %>
+  </table>
+      </div>
+</div>

@@ -15,7 +15,12 @@
 @import "components/body";
 @import "components/banner";
 @import "components/home";
+@import "components/articles";
 
 html {
   height: 100%;
+}
+
+.main {
+  display: flex;
 }

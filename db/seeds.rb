@@ -13,6 +13,8 @@ Supplier.destroy_all
 Compagny.destroy_all
 Category.destroy_all
 ArticleCategory.destroy_all
+User.destroy_all
+puts 'no users'
 puts 'No Compagnies Existing!'
 puts 'No Suppliers Existing !'
 puts 'No Articles Existing!'
@@ -20,6 +22,11 @@ puts 'No Compagny Existing!'
 
 puts 'creating Compagies'
 
+user1 = User.create!(
+  email: 'user1@gmail.com',
+  password: 'tototo',
+  password_confirmation: 'tototo'
+)
 dentidis = Compagny.create!(
   name: 'Dentidis',
   address: '8 chemin des tards venus, 69530 BRIGNAIS',

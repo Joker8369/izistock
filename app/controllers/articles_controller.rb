@@ -1,7 +1,9 @@
 class ArticlesController < ApplicationController
+   before_action :find, only: %i[edit show update destroy]
   def index
     @articles = Article.all
     @suppliers = Supplier.all
+    @user = current_user
   end
 
   def edit
